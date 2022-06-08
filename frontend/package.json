@@ -1,0 +1,28 @@
+{
+	"name": "frontend",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "svelte-kit dev",
+		"build": "svelte-kit build",
+		"package": "svelte-kit package",
+		"preview": "svelte-kit preview",
+		"prepare": "svelte-kit sync"
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-auto": "next",
+		"@sveltejs/kit": "next",
+		"autoprefixer": "^10.4.7",
+		"echarts": "^5.3.2",
+		"postcss": "^8.4.14",
+		"svelte": "^3.44.0",
+		"svelte-echarts": "^0.0.5",
+		"svelte-highlight": "^6.0.1",
+		"svelte-preprocess": "^4.10.7",
+		"tailwindcss": "^3.0.24"
+	},
+	"type": "module",
+	"dependencies": {
+		"daisyui": "^2.15.2",
+		"svelte-typewriter": "^3.0.0-alpha.11"
+	}
+}
