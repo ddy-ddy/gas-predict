@@ -6,5 +6,5 @@ node_modules
 .env
 .env.*
 !.env.example
-/idea
-/backend
+/.idea
+/backend/utils/__pycache__

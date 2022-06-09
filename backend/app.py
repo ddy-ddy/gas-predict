@@ -12,6 +12,7 @@ app = Flask(__name__)
 CORS(app)
 
 
+# 获取example
 @app.route("/example")
 def get_example_sol():
     data = pd.read_csv("utils/data.csv")
@@ -24,6 +25,7 @@ def get_example_sol():
     return make_response(result)
 
 
+# 用户上传文件，返回相应的结果
 @app.route("/upload", methods=["POST", "GET"])
 def upload():
     if request.method == 'POST':
@@ -31,7 +33,6 @@ def upload():
         all_info = []
         for i, item in enumerate(data["name"]):
             all_info.append([item, eval(data["data"].iloc[i])])
-        # all_info = all_info[:4]
         with open("test_contracts/AirDrop.sol", 'r') as f:
             result = {"code": str(f.read()), "data": all_info}
         return make_response(result)
