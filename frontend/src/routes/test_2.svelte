@@ -1,7 +1,7 @@
 <script context="module">
   // 从后端获取example的code数据
   export async function load({ fetch }) {
-    const res = await fetch('http://121.4.85.24:5001/example');
+    const res = await fetch('http://127.0.0.1:5000/example');
     const info = await res.json();
     return {
       props: {
@@ -104,7 +104,7 @@
   async function submitForm() {
     const dataArray = new FormData();
     dataArray.append('uploadFile', fileVar);
-    const res = await fetch('http://121.4.85.24:5001/upload', {
+    const res = await fetch('http://127.0.0.1:5000/upload', {
       method: 'POST',
       headers: [['Content-Type', 'multipart/form-data']],
       body: dataArray,
@@ -157,7 +157,7 @@
       <!-- 函数 -->
       <div class="mb-4 overflow-auto flex flex-row  gap-4 place-content-between">
         {#if !info.data}
-          <div class="p-2" />
+          <div class="p-2"></div>
         {/if}
         {#each info.data as tempInfo, i}
           <div class="hover:bg-gray-300 rounded-md p-2">
