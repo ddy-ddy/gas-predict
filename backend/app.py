@@ -4,12 +4,13 @@
 # @FileName: app.py.py
 # @github  : https://github.com/ddy-ddy
 
-from flask import Flask, request, make_response
+from flask import Flask, request, make_response,render_template
 from flask_cors import CORS
 import pandas as pd
 
 app = Flask(__name__)
 CORS(app)
+
 
 
 # 获取example

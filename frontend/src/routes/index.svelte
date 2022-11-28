@@ -1,7 +1,7 @@
 <script context="module">
   // 从后端获取example的code数据
   export async function load({ fetch }) {
-    const res = await fetch('http://121.4.85.24:5001/example');
+    const res = await fetch('https://ddy-use.xyz/example');
     const info = await res.json();
     return {
       props: {
@@ -104,7 +104,7 @@
   async function submitForm() {
     const dataArray = new FormData();
     dataArray.append('uploadFile', fileVar);
-    const res = await fetch('http://121.4.85.24:5001/upload', {
+    const res = await fetch('https://ddy-use.xyz/upload', {
       method: 'POST',
       headers: [['Content-Type', 'multipart/form-data']],
       body: dataArray,
